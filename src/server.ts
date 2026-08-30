@@ -1,7 +1,11 @@
 import express from "express";
 import pool from "./config/db";
+import userRoutes from "./routes/user.routes";
 
 const app = express();
+
+app.use(express.json());
+app.use("/users", userRoutes);
 
 app.get("/db-test", async(req,res)=>{
     try{
