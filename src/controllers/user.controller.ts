@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import pool from "../config/db";
-import { createUserSchema } from "../schemas/user.schema";
+import { createUserSchema, LoginUserSchema } from "../schemas/user.schema";
 import bcrypt from "bcrypt";
 
 export const createUser = async (req: Request, res: Response) => {
